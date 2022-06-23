@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/main.css">
+    <script src="~/js/main.js" defer></script>
+    <title>Yummy</title>
+</head>
+
+<body>
+    <header>
+        <div class="custom_container">
+            <nav class="topnav" id="myTopnav">
+                <div class="topnav_logo">
+                    <a>Yummy<span>.</span></a>
+                </div>
+                <div class="topnav_links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#news">About</a>
+                    <a href="#contact">Menu</a>
+                    <a href="#contact">Events</a>
+                    <a href="#contact">Chefs</a>
+                    <a href="#contact">Gallery</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Dropdown
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                    <a href="#about">Contact</a>
+                </div>
+                <div class="topnav_book">
+                    <a href="#">Book a Table</a>
+                </div>
+                <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </nav>
+            <nav class="sidebar close" id="sidebar">
+                <a href="#home" class="active">Home</a>
+                <a href="#news">About</a>
+                <a href="#contact">Menu</a>
+                <a href="#contact">Events</a>
+                <a href="#contact">Chefs</a>
+                <a href="#contact">Gallery</a>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        Dropdown
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <a href="#about">Contact</a>
+                <a href="javascript:void(0);" class="close_icon">
+                    <i class="fa-solid fa-xmark"
+                       onclick="myFunction()"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="custom_container">
+            <div class="footer_items">
+                <div class="footer_item">
+                    <div class="footer_icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer_text">
+                        <h3>Address</h3>
+                        <p>A108 Adam Street</p>
+                        <p>New York, NY 535022 - US</p>
+                    </div>
+                </div>
+                <div class="footer_item">
+                    <div class="footer_icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer_text">
+                        <h3>Reservations</h3>
+                        <p>Phone: <span> +1 5589 55488 55</span></p>
+                        <p>Email: <span>info@example.com</span></p>
+                    </div>
+                </div>
+                <div class="footer_item">
+                    <div class="footer_icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer_text">
+                        <h3>Opening Hours</h3>
+                        <p>Mon-Sat: <span>11AM - 23PM</span></p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="footer_item">
+                    <div class="footer_icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer_text">
+                        <h3>Follow Us</h3>
+                        <div class="follow_icons">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

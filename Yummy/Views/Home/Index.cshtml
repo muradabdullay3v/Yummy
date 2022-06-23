@@ -1,0 +1,100 @@
+﻿@using Yummy.ViewModels
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <section id="enjoy">
+        <div class="custom_container">
+            <div class="enjoy">
+                <div class="enjoy_summary">
+                    <div class="enjoy_title">
+                        <h2>
+                            Enjoy Your Healthy
+                            Delicious Food
+                        </h2>
+                    </div>
+                    <div class="enjoy_description">
+                        <p>
+                            Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae
+                            cumque eum quaerat.
+                        </p>
+                    </div>
+                    <div class="enjoy_links">
+                        <a href="#" class="enjoy_book">Book a Table</a>
+                        <div class="watch_video">
+                            <div class="watch_icon"><i class="fa-regular fa-circle-play"></i></div>
+                            <a href="#">Watch Video</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="enjoy_image">
+                    <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/hero-img.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="menu">
+        <div class="custom_container">
+            <div class="menu">
+                <div class="menu_text">
+                    <h5>OUR MENU</h5>
+                    <h2>Check Our <span>Yummy Menu</span></h2>
+                </div>
+                <div class="menu_filters">
+                    <button class="menu_filter active">Starters</button>
+                    <button class="menu_filter">Breakfast</button>
+                    <button class="menu_filter">Lunch</button>
+                    <button class="menu_filter">Dinner</button>
+                </div>
+                <div class="menu_starters">
+                    <h4>Menu</h4>
+                    <h3>Starters</h3>
+                </div>
+                <div class="menu_products">
+                    @foreach (var pr in Model.Products)
+                    {
+                        <div class="menu_products-item">
+                            <div class="product_image">
+                                <img src="@pr.Url"
+                                     alt="image">
+                            </div>
+                            <div class="product_text">
+                                <h2 class="product_name">@pr.Name</h2>
+                                <h3 class="description">@pr.Description</h3>
+                                <h2 class="price">$(@pr.Price)</h2>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="book">
+        <div class="custom_container">
+            <div class="book">
+                <div class="book_text">
+                    <h4>BOOK A TABLE</h4>
+                    <h2>Book <span>Your Stay</span> With Us</h2>
+                </div>
+            </div>
+            <div class="book_context">
+                <div class="book_image">
+                    <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/reservation.jpg" alt="image">
+                </div>
+                <form action="book" class="book_form">
+                    <input type="text" class="name" placeholder="Your Name">
+                    <input type="text" class="email" placeholder="Your Email">
+                    <input type="text" class="phone" placeholder="Your Phone">
+                    <input type="text" class="date" placeholder="Date">
+                    <input type="text" class="time" placeholder="Time">
+                    <input type="text" class="people" placeholder="# of people">
+                    <input type="text" class="msg" placeholder="Message">
+                    <button class="book">Book a Table</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
